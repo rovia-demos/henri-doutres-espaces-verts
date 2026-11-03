@@ -34,6 +34,12 @@
   addEventListener('scroll', function () { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
   onScroll();
 
+  /* Mobile contact bar: hidden while the hero buttons are on screen, shown once they scroll away */
+  var dock = $('.dock'), heroCtas = $('.hero__ctas');
+  new IntersectionObserver(function (en) {
+    dock.classList.toggle('is-on', !en[0].isIntersecting);
+  }).observe(heroCtas);
+
   /* Mobile menu */
   var burger = $('#burger'), nav = $('#nav');
   function setMenu(open) {

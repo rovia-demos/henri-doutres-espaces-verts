@@ -482,14 +482,14 @@ input[type=range]#sim-surface{-webkit-appearance:none;appearance:none;width:100%
 .dock{display:none}
 @media (max-width:760px){
   body{padding-bottom:calc(76px + env(safe-area-inset-bottom))}
-  .dock{position:fixed;left:0;right:0;bottom:0;z-index:60;display:grid;grid-template-columns:1fr 1fr 1.25fr;gap:8px;padding:10px 10px calc(10px + env(safe-area-inset-bottom));background:rgba(11,15,12,.94);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-top:1px solid var(--ligne)}
+  .dock{position:fixed;left:0;right:0;bottom:0;z-index:60;display:grid;grid-template-columns:1fr 1fr 1.25fr;gap:8px;padding:10px 10px calc(10px + env(safe-area-inset-bottom));background:rgba(11,15,12,.94);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-top:1px solid var(--ligne);transform:translateY(110%);visibility:hidden;transition:transform .4s var(--ease),visibility .4s}
+  .dock.is-on{transform:none;visibility:visible}
   .dock__btn{display:flex;align-items:center;justify-content:center;gap:7px;min-height:52px;border-radius:14px;font-weight:800;font-size:.95rem;text-decoration:none;-webkit-tap-highlight-color:transparent}
   .dock__btn svg{width:20px;height:20px;fill:currentColor}
   .dock__btn--call{background:var(--sapin-2);color:#fff}
   .dock__btn--wa{background:#1FA855;color:#fff}
   .dock__btn--devis{background:var(--jaune);color:var(--noir)}
   .footer__bottom{padding-bottom:16px}
-  .hero__in{padding-bottom:calc(92px + env(safe-area-inset-bottom))}
   .clean__txt{padding-bottom:calc(92px + env(safe-area-inset-bottom))}
 }
 
